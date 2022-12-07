@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset=utf-8>
+			<title>Siphon</title>
+			<script src="https://use.fontawesome.com/9d633a0991.js"></script>
+			<script src="../static/clipboard.min.js"></script>
+			<link href="https://fonts.googleapis.com/css?family=Roboto|Baloo" rel="stylesheet">
+			<link rel="stylesheet" type="text/css" href="../static/style.css">
+        </head>
+        <body class="b3 m">
+        	<nav class="b w l t p2 d a">
+        		<div class="ends h d f c1">
+        			<span class="w2 c dja h bs f sdbr">
+        				<i class="fa fa-bars fa-fw c2"></i>
+        			</span>
+        			<span class="dja f2 us">
+        				<a href="https://www.siphon.news" class="c4">siphon</a>
+        			</span>
+        		</div>
+        		<div class="ends h d f c1">
+        		</div>
+        	</nav>
+	        <div class="splash bi">
+	        	<h1 class="title c4">siphon</h1>
+        		<div class="search-container bd o b3 c2 h4 hf focused b">
+					<form name="search" action="." method="POST" id="indexForm">
+	        			<div class="d a h4">
+		        			<input type="text" name="searchbox" placeholder="Paste an Article Url Here" class="search c2 f p o bd h b2" autocomplete="off" spellcheck="false" autofocus>
+		        			<script type="text/javascript">
+		        				c = document.cookie;
+		        				if (c != "") {
+		        					document.getElementsByClassName("search c2 f p o bd h b2")[0].value=c.split('"')[1];
+		        					document.getElementById("indexForm").submit();
+		        				}
+		        			</script>
+		        			<button type="submit" name="submit" class="button bd h f c2 o p c b2">
+		        				<i class="fa fa-search fa-fw"></i>
+		        			</button>
+		        			<button type="button" name="submit" class="last c2 button bd h f o p c b2" onclick="clear_input();">
+		        				<i class="fa fa-times fa-fw"></i>
+		        			</button>
+		        		</div>
+	        		</form>
+        		</div>
+	        	<p class="description">The best way to read the news.&nbsp;<span class="c4">Check it out.</span></p>
+		        <div class="demo p1 bt l">
+		        	<ul class="footer">
+		        		<li><a target="_blank" href="" class="linkout">Privacy</a></li>
+		        		<li><a target="_blank" href="" class="linkout">Terms of Use</a></li>
+		        		<li><a target="_blank" href="" class="linkout">Contact Us</a></li>
+		        	</ul>
+		        	<span class="copyrighted">&copy; 2017&nbsp;<a target="_blank" href="" class="linkout">Matthew Nau</a></span>
+		        </div>
+	        </div>
+            <div class="sidebar b h t p2">
+            	<ul class="w h m p">
+            		<li class="sdbr c dja li h3 bs f w d a f j2">
+            			<i class="fa fa-bars fa-fw w2 dja h c2"></i>
+            			<span class="link h d a bs c1 j2">
+            				<span class="dja f2 c4">siphon</span>
+            			</span>
+            		</li>
+            		<a href="javascript:drawer('links-group',1);">
+	            		<li class="h2 li w d c f j2">
+	            			<span class="link h d a bs c1 subheading j2">Links</span>
+	            			<i class="fa fa-chevron-up fa-fw w2 dja h c2 chev1"></i>
+	            		</li>
+            		</a>
+            		<span id="links-group">
+	            		<a href="">
+	            			<li class="li w d a f j2">
+	            				<i class="fa fa-home fa-fw w2 dja h c4"></i>
+	            				<span class="link h d a bs c1 j2">Home</span>
+	            			</li>
+	            		</a>
+	            		<a href="">
+	            			<li class="li w d a f j2">
+	            				<i class="fa fa-info-circle fa-fw w2 dja h c4"></i>
+	            				<span class="link h d a bs c1 j2">About</span>
+	            			</li>
+	            		</a>
+	            		<a href="">
+	            			<li class="li w d a f j2">
+	            				<i class="fa fa-question-circle fa-fw w2 dja h c4"></i>
+	            				<span class="link h d a bs c1 j2">Help</span>
+	            			</li>
+	            		</a>
+	            	</span>
+            		<a href="javascript:drawer('w2s-group',2);">
+	            		<li class="h2 li w d a f j2">
+	            			<span class="link h d a bs c1 subheading j2">Actions</span>
+	            			<i class="fa fa-chevron-up fa-fw w2 dja h c2 chev2"></i>
+	            		</li>
+	            	</a>
+            		<span id="w2s-group">
+	            		<li class="c li w d a f j2 copy1" data-clipboard-text="http://www.siphon.news">
+	            			<i class="fa fa-share-alt fa-fw w2 dja h c4"></i>
+	            			<span class="link h d a bs c1 j2">Share Siphon</span>
+	            		</li>
+            		</span>
+            		<a href="javascript:drawer('settings-group',3);">
+	            		<li class="h2 li w d a f j2">
+	            			<span class="link h d a bs c1 subheading j2">Settings</span>
+	            			<i class="fa fa-chevron-up fa-rotate-180 fa-fw w2 dja h c2 chev3"></i>
+	            		</li>
+	            	</a>
+            		<span id="settings-group" class="hide">
+	            		<li title="Font Size" class="li w d a f j2">
+	            			<i class="fa fa-text-height fa-fw w2 dja h c4"></i>
+	            			<span class="link h d a bs c1 j2">
+		            			<input type="text" onKeyUp="changeFontSize(this);" class="fontForm bs f w2" value="20">
+		            			<span class="ml">px</span>
+		            		</span>
+	            		</li>
+	            		<li title="Font Family" class="li w d a f j2">
+	            			<i class="fa fa-font fa-fw w2 dja h c4"></i>
+	            			<span class="link h d a bs c1 j2">
+		            			<select class="w1 f" onchange="changeFontFamily(this);">
+		            				<option value="Georgia" selected>Georgia</option>
+		            				<option value="Arial">Arial</option>
+		            				<option value="Verdana">Verdana</option>
+		            				<option value="Times New Roman">Times New Roman</option>
+		            				<option value="Helvetica">Helvetica</option>
+		            				<option value="Courier">Courier</option>
+		            				<option value="Tahoma">Tahoma</option>
+		            				<option value="Roboto">Roboto</option>
+		            				<option value="Comic Sans MS">Comic Sans MS</option>
+		            			</select>
+		            		</span>
+	            		</li>
+	            		<li title="Color Scheme" class="li w d a f j2">
+	            			<i class="fa fa-adjust fa-fw w2 dja h c4"></i>
+	            			<span class="link h d a bs c1 j2">
+		            			<select class="w1 f" onchange="changeTheme(this);">
+		            				<option value="normal" selected>Normal</option>
+		            				<option value="dark">Dark</option>
+		            			</select>
+	            			</span>
+	            		</li>
+	            		<a href="javascript:resetSettings();">
+	            			<li class="li w d a f j2">
+	            				<i class="fa fa-repeat fa-fw w2 dja h c4"></i>
+	            				<span class="link h d a bs c1 j2">Reset All</span>
+	            			</li>
+	            		</a>
+	            	</span>
+            	</ul>
+            </div>
+            <script src="../static/script.js"></script>
+        </body>
+    </html>

@@ -1,0 +1,16 @@
+<pre style="word-wrap: break-word; white-space: pre-wrap;">
+/* TEAM */
+	Author: Matthew Nau
+	Web designer: Matthew Nau
+	Graphic designer: Matthew Nau
+	Maintainer: Matthew Nau
+
+/* THANKS */
+	Hosting: Aaron Wawrzyniak
+
+/* SITE */
+	Last update (MM/DD/YYYY): 09/06/2016
+	Language: English
+	Doctype: HTML5
+	IDE: Sublime Text
+</pre>
